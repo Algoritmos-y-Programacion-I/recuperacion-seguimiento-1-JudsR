@@ -61,9 +61,21 @@ public class RecuperacionSeguimiento1 {
 		//
 
 		// Ejercicio #5
+		double a, b, c;
+		String resultado;
+
+		System.out.println("");
 		System.out.println("Ahora, para el #5 se requiere de 3 numeros.");
-		System.out.println("Con los cuales ecuación cuadrática de la forma: ax^2 + bx + c");
-		
+		System.out.println("Con los cuales ecuación cuadrática de la forma: ax^2 + bx + c.");
+		System.out.println("Ingrese el termino a de la ecuación: ");
+		a = escaner.nextDouble();
+		System.out.println("Ingrese el termino b de la ecuación: ");
+		b = escaner.nextDouble();
+		System.out.println("Ingrese el termino c de la ecuación: ");
+		c = escaner.nextDouble();
+		resultado = eCuadratica(a, b, c);
+		System.out.println(resultado);
+
 		
 
 
@@ -164,4 +176,29 @@ public class RecuperacionSeguimiento1 {
 		return vOf;
 	 }
 	
+	 public String eCuadratica (double a,double b, double c) {
+		double opDentroRaiz, raiz, positivo, negativo;
+		String resultadoDoble;
+
+		opDentroRaiz = Math.pow(b,2)-4*a*c;
+		raiz = Math.sqrt(opDentroRaiz);
+		positivo = resultPositivo(a, b, raiz);
+		negativo = resultNegativo(a, b, raiz);
+
+		resultadoDoble = ("Las raices de la ecuacion cuadratica "+a+"x^2+"+b+"x+"+c+" son: X = "+positivo+", X´ = "+negativo+".");
+		return resultadoDoble;
+	 }
+
+	public double resultPositivo (double a,double b, double raiz) {
+		double positivo;
+
+		positivo = (-b+raiz)/(2*a);
+		return positivo;
+	}
+	public double resultNegativo (double a,double b, double raiz) {
+		double negativo;
+
+		negativo = (-b-raiz)/(2*a);
+		return negativo;
+	}
 }
