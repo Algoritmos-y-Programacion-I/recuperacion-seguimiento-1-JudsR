@@ -28,7 +28,6 @@ public class RecuperacionSeguimiento1 {
 		n3 = escaner.nextInt();
 		paramIguales = parametrosIguales (n1, n2, n3);
 		System.out.println("Se ingresan "+n1+", "+n2+", "+n3+"; el resultado es "+paramIguales+".");
-
 		//
 
 		// Ejercicio 2
@@ -60,7 +59,6 @@ public class RecuperacionSeguimiento1 {
 		param3 = escaner.nextLine();
 		longCadena = longParametros(param1, param2, param3);
 		System.out.println("Se ingresan "+param1+", "+param2+" y "+param3+", el resultado es "+longCadena+".");
-
 		//
 
 		//Ejercicio 4
@@ -92,27 +90,7 @@ public class RecuperacionSeguimiento1 {
 		c = escaner.nextDouble();
 		resultado = eCuadratica(a, b, c);
 		System.out.println(resultado);
-
-		
-
-
-        // Metodo pow de Math
-        /*double a = 2;
-        double b = 3;
-        System.out.println(Math.pow(a, b));*/
-        
-
-        // Declaracion de info a pedir del usuario 
-        
-        // Pedir info al usuario 
-
-        // Declaracion de salidas calculadas 
-       
-        // Calculo de salidas mediante metodos 
-        
-
-        // Mostramos las salidas al usuario
-        
+		//        
 	}
 
 	public static void main(String[] args) {
@@ -134,9 +112,9 @@ public class RecuperacionSeguimiento1 {
 	}
 
     /**
-	 * Descripción: El método parametrosIguales permite evaluar si los numeros ingresados son el mismo
-	 * @param 
-	 * @return 
+	 * Descripción: El método parametrosIguales permite evaluar si los numeros ingresados son el mismo o distintos
+	 * @param: Los parametros son los tres números ingrrsados por el usuarios
+	 * @return: devuelve el valor de i el cual aumenta dependiendo de la cantidad de números similares
 	 */
 
 	 public int validacionE2 (String nombre) {
@@ -153,6 +131,11 @@ public class RecuperacionSeguimiento1 {
 				}
 		}
 	 }
+	 /**
+	 * Descripción: El método validacionE2 permite evaluar si los numeros ingresados en el ejercicio 2 son 1 ó 0
+	 * @param: El parametro es el nombre del usuario
+	 * @return: devuelve el valor de n0_1 en el caso de que esta sea validado como 1 ó 0
+	 */
 
 	 public String mensajeResultado(int n0_1, String nombre) {
 		String mensaje;
@@ -166,6 +149,11 @@ public class RecuperacionSeguimiento1 {
 		}
 		return mensaje;
 	 }
+	 /**
+	 * Descripción: El método mensajeResultado permite evaluar dependiendo de si es 0 ó 1 para saludar o despedirse
+	 * @param: El parametro es el nombre del usuario y el número ingresado previamente el cual indica si es 0 ó 1
+	 * @return: devuelve el valor de n0_1 en el caso de que esta sea validado como 1 ó 0
+	 */
 
 	 public int longParametros (String param1, String param2, String param3) {
 		int i;
@@ -182,6 +170,11 @@ public class RecuperacionSeguimiento1 {
 		}
 		return i;
 	 }
+	 /**
+	 * Descripción: El método longParametros permite medir la longitud de las palabras ingresadas y lleva un contador dependiendo de la cantidad de palabras que cumplan el requisito
+	 * @param: Los parametros son las 3 palabras ingresadas por el usuario
+	 * @return: devuelve el valor de i el cual es un contador de veces que una palabra tiene más de 4 caracteres
+	 */
 
 	 public String validarPalabra(Scanner escaner){
 		String palabra; 
@@ -197,6 +190,11 @@ public class RecuperacionSeguimiento1 {
 			}
 		}
 	 }
+	 /**
+	 * Descripción: El método validarPalabra evalúa si la palabra ingresada tiene más de 3 caracteres lo cual es necesario para llevar a cabo el resto del código
+	 * @param: El parámetro es el escanor mismo puesto que devuelve una palabra que recibe dentro del mismo método
+	 * @return: Devuelve la palabra que cumple con las características requeridas
+	 */
 	
 	 public boolean  validarCaracter2(String palabra1, String palabra2){
 		boolean vOf;
@@ -208,6 +206,11 @@ public class RecuperacionSeguimiento1 {
 		}
 		return vOf;
 	 }
+	 /**
+	 * Descripción: El método validarCaracter2 evalúa si una condición es verdadera o falsa si no se cumple
+	 * @param: Los parámetros son las 2 palabras ingresadas por el usuario las cuales evalúa
+	 * @return: Devuelve el valor de la afirmación como verdaro o falso
+	 */
 	
 	 public String eCuadratica (double a,double b, double c) {
 		double opDentroRaiz, raiz, positivo, negativo;
@@ -221,6 +224,11 @@ public class RecuperacionSeguimiento1 {
 		resultadoDoble = ("Las raices de la ecuacion cuadratica "+a+"x^2+"+b+"x+"+c+" son: X = "+positivo+", X´ = "+negativo+".");
 		return resultadoDoble;
 	 }
+	 /**
+	 * Descripción: El método eCuadratica realiza el proceso para calcular las raices de una formula cuadrática
+	 * @param: Los parámetros son 3 números pertenecientes a a, b y c según la fórmula
+	 * @return: Devuelve el resultado escrito formal de los cálculos
+	 */
 
 	public double resultPositivo (double a,double b, double raiz) {
 		double positivo;
@@ -228,10 +236,21 @@ public class RecuperacionSeguimiento1 {
 		positivo = (-b+raiz)/(2*a);
 		return positivo;
 	}
+	/**
+	 * Descripción: El método resultPositivo calcula la versión del + de la fórmula cuadrática
+	 * @param: Los parámetros son a, b y el resultado de la raís, pues le permite completar lo que falta de la operación
+	 * @return: Devuelve el resultado de los cálculos
+	 */
+
 	public double resultNegativo (double a,double b, double raiz) {
 		double negativo;
 
 		negativo = (-b-raiz)/(2*a);
 		return negativo;
 	}
+	/**
+	 * Descripción: El método resultNegativo calcula la versión del - de la fórmula cuadrática
+	 * @param: Los parámetros son a, b y el resultado de la raís, pues le permite completar lo que falta de la operación
+	 * @return: Devuelve el resultado de los cálculos
+	 */
 }
