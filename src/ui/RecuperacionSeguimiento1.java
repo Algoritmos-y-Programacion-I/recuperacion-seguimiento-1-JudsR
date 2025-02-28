@@ -15,6 +15,8 @@ public class RecuperacionSeguimiento1 {
 	
 	public void run() // Aqui en el metodo run hacemos lo de nuestro metodo main. Solo entrada de datos, mensajes al usuario y mostrar salidas
 	{   
+
+		// Ejercicio 1
 		int n1, n2, n3, paramIguales;
 		
 		System.out.println("Para el ejercicio #1 ingrese tres valores enteros: ");
@@ -27,10 +29,27 @@ public class RecuperacionSeguimiento1 {
 		paramIguales = parametrosIguales (n1, n2, n3);
 		System.out.println("Se ingresan "+n1+", "+n2+", "+n3+"; el resultado es "+paramIguales);
 
+		//
+
+		// Ejercicio 2
+		String nombre;
+		int n0_1;
+
+		System.out.println("");
+		System.out.println("Para el ejercicio #2 ingrese su nombre por favor: ");
+		nombre = escaner.nextLine();
+		escaner.nextLine();
+		System.out.println("Ahora ingrese un numero, si es 1 = saludo, 0 = adios: ");
+		n0_1 = validacionE2(nombre);
+		mensajeResultado(n0_1, nombre);
+		
+		
+
+
         // Metodo pow de Math
-        double a = 2;
+        /*double a = 2;
         double b = 3;
-        System.out.println(Math.pow(a, b));
+        System.out.println(Math.pow(a, b));*/
         
 
         // Declaracion de info a pedir del usuario 
@@ -61,7 +80,6 @@ public class RecuperacionSeguimiento1 {
 			i+= 2;
 		}
 
-
 		return i;
 	}
 
@@ -70,6 +88,33 @@ public class RecuperacionSeguimiento1 {
 	 * @param 
 	 * @return 
 	 */
+
+	 public int validacionE2 (String nombre) {
+		int n0_1;
+
+			while (true) {
+				n0_1 = escaner.nextInt();
+				if (n0_1 != 1 || n0_1 != 0) {
+					System.err.println("Se ingresan "+nombre+" y "+n0_1+", el resultado es “Error entradas inválidas");
+				} else {
+					break;
+				}
+		}
+		return n0_1;
+	 }
+
+	 public String mensajeResultado(int n0_1, String nombre) {
+		String mensaje;
+		
+		if (n0_1 == 1) {
+			mensaje = ("Se ingresan "+nombre+" y "+n0_1+", el resultado es “Hola "+nombre);
+			
+		} else{
+			mensaje = ("Se ingresan "+nombre+" y "+n0_1+", el resultado es “Hola "+nombre);
+			
+		}
+		return mensaje;
+	 }
 	
 
 	
