@@ -45,13 +45,30 @@ public class RecuperacionSeguimiento1 {
 		System.out.println(mensaje);
 		//
 
+		//Ejercicio 3
+		String param1, param2, param3;
+		int longCadena;
+
+		System.out.println("");
+		System.out.println("Para el ejercicio 3 se requiere que ingrese 3 palabras con el fin de determinar cuantas de estas tienen 4 o mas caracteres.");
+		System.out.println("Ingrese la primera palabra: ");
+		escaner.nextLine();
+		param1 = escaner.nextLine();
+		System.out.println("Ingrese la segunda palabra: ");
+		param2 = escaner.nextLine();
+		System.out.println("Ingrese la tercera palabra: ");
+		param3 = escaner.nextLine();
+		longCadena = longParametros(param1, param2, param3);
+		System.out.println("Se ingresan "+param1+", "+param2+" y "+param3+", el resultado es "+longCadena+".");
+
+		//
+
 		//Ejercicio 4
 		String palabra1, palabra2;
 		boolean vOf;
 
 		System.out.println("");
-		System.out.println("Para el ejercicio 4 ingrese dos palabras y validaremos si el caracter de la posicion 2 es el mismo: ");
-		escaner.nextLine();
+		System.out.println("Para el ejercicio 4 ingrese dos palabras y validaremos si el caracter de la posicion 2 es el mismo.");
 		System.out.println("Palabra 1: ");
 		palabra1 = validarPalabra(escaner);
 		System.out.println("Palabra 2: ");
@@ -144,10 +161,26 @@ public class RecuperacionSeguimiento1 {
 			mensaje = ("Se ingresan "+nombre+" y "+n0_1+", el resultado es: Hola "+nombre+".");
 			
 		} else{
-			mensaje = ("Se ingresan "+nombre+" y "+n0_1+", el resultado es: Hola "+nombre+".");
+			mensaje = ("Se ingresan "+nombre+" y "+n0_1+", el resultado es: Adios "+nombre+".");
 			
 		}
 		return mensaje;
+	 }
+
+	 public int longParametros (String param1, String param2, String param3) {
+		int i;
+
+		i = 0;
+		if (param1.length() >= 4) {
+			i+= 1;
+		}
+		if (param2.length() >= 4) {
+			i+= 1;
+		}
+		if (param3.length() >= 4) {
+			i+= 1;
+		}
+		return i;
 	 }
 
 	 public String validarPalabra(Scanner escaner){
@@ -168,7 +201,7 @@ public class RecuperacionSeguimiento1 {
 	 public boolean  validarCaracter2(String palabra1, String palabra2){
 		boolean vOf;
 		 
-		if (palabra1.charAt(2) == palabra1.charAt(2)){
+		if (palabra1.charAt(2) == palabra2.charAt(2)){
 			vOf = true;
 	 	} else{
 			vOf = false;
